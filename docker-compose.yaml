@@ -1,4 +1,7 @@
 pdfalto:
   build: .
-  ports:
-  - "80:80"
+  environment:
+    - FILE=/app/input/PMAFR2.pdf
+  volumes:
+    - ./input/:/app/input/
+    - ./output/:/app/output/

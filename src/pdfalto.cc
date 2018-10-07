@@ -180,7 +180,7 @@ int main(int argc, char *argv[]) {
     ok = parseArgs(argDesc, &argc, argv);
     if (XMLcfgFileName[0]){}
     else{
-        if (!ok || argc < 2 || argc > 3 || printVersion || printHelp) {
+        if (!ok || argc < 2 || printVersion || printHelp) {
             fprintf(stderr, "%s", PDFALTO_NAME);
             fprintf(stderr, " version ");
             fprintf(stderr, "%s", PDFALTO_VERSION);

@@ -1,2 +1,5 @@
 Dockerfile
 docker-compose.yaml
+input/
+output/
+CMakeCache.txt
