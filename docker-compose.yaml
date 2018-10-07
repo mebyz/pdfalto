@@ -1,0 +1,4 @@
+pdfalto:
+  build: .
+  ports:
+  - "80:80"

@@ -50,6 +50,18 @@ In addition to the [ALTO](https://github.com/altoxml/documentation/wiki) file de
 
 # Build
 
+## Docker
+
+- compatibility : any platform running docker
+
+- base image : ubuntu 18.04
+
+- sample usage : docker-compose build && docker-compose up
+
+- remarks : in docker-compose.yaml, you can configure pdfalto input file, etc.
+
+-----------------
+
 ### Linux and MacOS
 
 * Install libxml2 (development headers). See http://xmlsoft.org/ 

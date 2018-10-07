@@ -1698,7 +1698,7 @@ public:
 
     TextPage * getText(){return text;}
 
-    void startDoc(XRef *xrefA);
+    //void startDoc(XRef *xrefA);
 
     void updateCTM(GfxState *state, double m11, double m12,
                                      double m21, double m22,
@@ -1807,7 +1807,7 @@ private:
             t3FontCache[splashOutT3FontCacheSize];
 
     GBool needFontUpdate;		// set when the font needs to be updated
-    SplashFont * getSplashFont(GfxState *state, SplashCoord *matrix);
+    //SplashFont * getSplashFont(GfxState *state, SplashCoord *matrix);
 
     SplashPath *convertPath(GfxState *state, GfxPath *path, GBool dropEmptySubpaths);
 };

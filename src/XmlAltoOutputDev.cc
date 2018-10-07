@@ -7392,7 +7392,7 @@ XmlAltoOutputDev::~XmlAltoOutputDev() {
     int j;
 
     for (j = 0; j < nT3Fonts; ++j) {
-        delete t3FontCache[j];
+        //delete t3FontCache[j];
     }
     if (fontEngine) {
         delete fontEngine;
@@ -7429,8 +7429,8 @@ XmlAltoOutputDev::~XmlAltoOutputDev() {
         mat[3] = (SplashCoord)curstate[3];
         mat[4] = (SplashCoord)curstate[4];
         mat[5] = (SplashCoord)curstate[5];
-        SplashFont* splashFont = getSplashFont(state, mat);
-        text->endActualText(state, splashFont);
+        //SplashFont* splashFont = getSplashFont(state, mat);
+        //text->endActualText(state, splashFont);
     }
 
 void XmlAltoOutputDev::initMetadataInfoDoc(){
@@ -7786,7 +7786,7 @@ void XmlAltoOutputDev::updateFont(GfxState *state) {
     needFontUpdate = gTrue;
     text->updateFont(state);
 }
-
+/*
 void XmlAltoOutputDev::startDoc(XRef *xrefA) {
     int i;
 
@@ -7807,11 +7807,11 @@ void XmlAltoOutputDev::startDoc(XRef *xrefA) {
             globalParams->getAntialias() &&
             colorMode != splashModeMono1);
     for (i = 0; i < nT3Fonts; ++i) {
-        delete t3FontCache[i];
+        //delete t3FontCache[i];
     }
     nT3Fonts = 0;
 }
-
+*/
 class SplashOutFontFileID: public SplashFontFileID {
 public:
 
@@ -7838,7 +7838,7 @@ private:
     double oblique;
     int substIdx;
 };
-
+/*
 SplashFont* XmlAltoOutputDev::getSplashFont(GfxState *state, SplashCoord* matrix) {
     SplashFont *font;
     GfxFont *gfxFont;
@@ -8344,7 +8344,7 @@ SplashFont* XmlAltoOutputDev::getSplashFont(GfxState *state, SplashCoord* matrix
 #endif
     return font;
 }
-
+*/
 void XmlAltoOutputDev::drawChar(GfxState *state, double x, double y, double dx,
                             double dy, double originX, double originY, CharCode c, int nBytes,
                             Unicode *u, int uLen) {
@@ -8361,7 +8361,7 @@ void XmlAltoOutputDev::drawChar(GfxState *state, double x, double y, double dx,
     mat[3] = (SplashCoord)(curstate[3] );
     mat[4] = (SplashCoord)(curstate[4] );
     mat[5] = (SplashCoord)(curstate[5] );
-    splashFont = getSplashFont(state, mat);
+    //splashFont = getSplashFont(state, mat);
     if((uLen == 0  || ((u[0] == (Unicode)0 || u[0] < (Unicode)32) && uLen == 1 ))) {//&& globalParams->getApplyOCR())
         // as a first iteration for dictionnaries, placing a placeholder, which means creating a map based on the font-code mapping to unicode from : https://unicode.org/charts/PDF/U2B00.pdf
         GString *fontName = new GString();
